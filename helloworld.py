@@ -1,8 +1,11 @@
 import sys
 
-name=input("Hi, What is your name? \n")
 
-if len(name) ==0:
-    print("Hello World :)")
-else:
-    print("Hello " + str(name))
+def welcome():
+    if len(sys.argv)>1:
+        name=(sys.argv[-1])
+    else:
+        name="World"
+    return(print("Hello "+ name +"!"))
+
+welcome()
